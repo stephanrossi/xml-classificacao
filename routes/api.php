@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\XmlFileController;
 use App\Http\Controllers\XmlFileController2;
+use App\Http\Controllers\XmlFileController3;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/', [XmlFileController2::class, 'processSpreadsheet']);
+Route::post('/', [XmlFileController3::class, 'processSpreadsheet']);

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\XmlFileController3;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('upload');
 });
+
+Route::post('/upload', [XmlFileController3::class, 'processSpreadsheet']);
